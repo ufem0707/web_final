@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style type = "text/css">
+        body {
+            background-image: url("back.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #main {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 40%;
+            height: 50%; 
+
+        }
+        #myVideo {
+            position: absolute;
+            top: 5%;
+            left: 3.5%;
+            width: 93%;
+            height: 90%; 
+            z-index: 2;
+        }
+        #TV{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;  
+            z-index: 1;
+            
+        }
+        #myImage{
+            position: absolute;
+            top: 10%;
+            left: 4%;
+            width: 92%;
+            height: 90%; 
+            z-index: 1;
+        }
+        #control{
+            position: absolute;
+            top: 10%;
+            left: 65%;
+            width: 35%;
+            height: 50%;  
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <img id="TV" src="TV.png" alt="TV"><br>
+        <video id="myVideo" loop></video><br>
+        <audio id="myAudio" src="music.mp3"></audio>
+        <img id="myImage" src="music.png" alt="music"><br>
+    </div>
+    <div id="control">
+        <button id="playBtn">Play</button>
+        <button id="fullBtn">FullScreen</button><br>
+        <div id="channel">
+        <div>
+            <p>Volume : <span id="volumeDisplay">?</span>
+            <button id="lowerVolumeBtn">-</button>
+            <button id="higherVolumeBtn">+ </button></p>
+        </div>
+        <div>
+            <p>Time : <span id="timeDisplay">? / ?</span><br>
+            <input type="range" id="progressBar" min="0" value="0"></p>
+        </div>
+        <button id="doubleSpeed">2X播放</button>
+        <button id="originalSpeed">1X播放</button>
+        <button id="halfSpeed">0.5X播放</button><br>
+            <p>Swith Channel :
+            <button id="prevVideo">◀</button>
+            <button id="nextVideo">▶</button></p>
+        </div>
+        <button id="musicBtn">Play Music</button>
+    </div>
+    <script src=" //unpkg.com/jquery"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
